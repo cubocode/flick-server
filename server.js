@@ -1,3 +1,5 @@
+require('dotenv').config({ path: require('path').resolve(__dirname, '.env') });
+
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
@@ -21,7 +23,12 @@ if (!fs.existsSync(uploadsDir)) {
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://192.168.1.71:3000", "http://localhost:3002"],
+    origin: [
+      "http://localhost:3000",
+      "http://192.168.1.71:3000",
+      "http://localhost:3002",
+      "https://flick-client-ejjy.vercel.app"
+    ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })

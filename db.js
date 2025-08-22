@@ -1,10 +1,5 @@
 const { Pool } = require('pg');
-const dotenv = require('dotenv');
-const path = require('path');
-dotenv.config({ path: path.resolve(__dirname, '.env') });
 
-
-// Configurar la conexión a PostgreSQL
 const pool = new Pool({
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
