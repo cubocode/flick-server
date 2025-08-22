@@ -4,7 +4,7 @@ const {
   getEventos,
   getEventoById,
   createEvento,
-  updateEvento,
+  updateEvento, //prueba
   deleteEvento,
 } = require("../controllers/eventos");
 
