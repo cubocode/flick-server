@@ -13,4 +13,11 @@ const pool = new Pool({
   database: process.env.DB_NAME,
 });
 
+console.log("DB config:", {
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+});
+
 module.exports = pool;
